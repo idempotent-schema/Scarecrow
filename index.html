@@ -1,18 +1,714 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <style>
-      body { padding: 50px; }
-    </style>
-  </head>
-  <body>
-    <article>
-      <section>
-        <div>
-          This will give more information about my Idempotent Schema element set registered with the Open Metadata Registry
-        </div>
-      </section>
-    </article>
-  </body>
+    <head>
+        <title>
+            Idempotent Schema
+        </title>
+        <style>
+            body { padding: 50px; line-height: 125%; font-family: sans-serif; }
+            table { margin: 10px; padding: 10px; border: 1px solid black; }
+        </style>
+    </head>
+    <body vocab="http://iflastandards.info/ns/fr/frbr/frbroo/" prefix="crm: http://www.cidoc-crm.org/cidoc-crm/">
+        <header>
+            <h1 style="text-align: center">
+                Idempotent Schema
+            </h1>
+        </header>
+        <hr style="width: 61.8%"><br>
+        <main>
+            <article>
+                <header>
+                    <h3 style="text-align: center">
+                        definition and the like
+                    </h3>
+                </header>
+                <section>
+                    <div style="text-align: justify">
+                        As an IFLA FRBRoo <i>F34 KOS</i> document, which in FRSAD (section 4.2.2) was the <i>nomen</i> attribute frsad:P3004 <i>hasScheme</i>, this entity is the domain for attribute property <i>R34 has validity period</i> = FRSAD 4.2.9 or frsad:P3011 <i>hasTimeOfValidityOfNomen</i>.
+                        It is an <i>F2 expression</i>, and thereby a CIDOC CRM <i>E73 information object</i>, thereby an <i>E89 propositional object</i> and/or <i>E90 symbolic object</i>.
+                        The following excerpt from “A Strange Model Named FRBRoo” gives some thoughts on these concepts:
+                        <blockquote>
+                            <div>
+                                In FRBRer, the Expression entity is “the intellectual or artistic realization of a <i>work</i> in the form of alpha-numeric, musical, or choreographic notation, sound, image, object, movement, etc., or any combination of such forms.”
+                                The FRBRoo scope note for F2 Expression, while rephrasing that same definition, also insists that ‘the substance of Expression is signs,’ and F2 Expression is declared as a subclass of the CIDOC CRM class E73 Information Object, which in turn is both a subclass of E89 Propositional Object and E90 Symbolic Object.
+                                This implies that, although a Work can be considered independently from any of its symbolic representations (i.e., as a mere instance of E89 Propositional Object), an Expression is never taken in isolation, as a mere set of signs, but is always regarded as conveying a given set of propositions (i.e. as an instance of E89 Propositional Object <i>in addition to</i> being an instance of E90 Symbolic Object).
+                                It should be noted that E89 Propositional Object and E90 Symbolic Object were introduced in CIDOC CRM on the occasion of this harmonization effort between FRBR and CIDOC CRM.
+                                Initially, the need for a strong distinction between the conceptual content of an artistic creation and the signs that convey that conceptual content had not been felt, and E73 Information Object covered both concepts and signs (which makes sense as far as museum objects are concerned).
+                                The Work/Expression distinction did not fit in that construct and it proved necessary to modify CIDOC CRM in order to define FRBRoo as an extension thereof.
+                                It should also be noted that E89 Propositional Object does not refer only to conceptual propositions such as expressed in textual expressions, but covers any kind of notions that can be assimilated to propositions, including the concepts that inform a painting, an art print, a photograph, a piece of music, and so on.
+                                An expression can be complete in itself, or be just a fragment of another expression.
+                                This is reflected in the fact that F2 Expression has two subclasses: F22 Self-Contained Expression, and F23 Expression Fragment.[<a href="#1">1</a>]
+                            </div>
+                        </blockquote>
+                    </div>
+                    <br>
+                    <div style="text-align: justify">
+                        The superclass of <i>E89</i> and <i>E90</i> is <i>E28 conceptual object</i>.
+                        As the <i>conceptual object</i>, this authority record is the domain for property <i>P149 is identified by</i> its <i>E41 appellation</i> “<b>Idempotent Schema</b>.”
+                        Further superclassification is, of course, important.
+                        Initially, however, this record is trying to establish itself and build from its own foundation.
+                        The <i>F2 expression</i> क्रन्दितृ, or “Kranditri (Knowledge Representation and (Information Theory) Reasoning,” is its language.
+                    </div>
+                </section>
+                <footer>
+                    <h4>
+                        References
+                    </h4>
+                    <ol>
+                        <li>
+                            <a name="1">
+                                Smiraglia, R. P., P. Riva, M. Žumer, and P. L. Boeuf. 2013.
+                            </a>
+                            “A Strange Model Named FRBRoo.” In <i>The FRBR Family of Conceptual Models: Toward a Linked Bibliographic Future</i>, 70. Routledge.
+                        </li>
+                    </ol>
+                </footer>
+            </article>
+            <br><hr style="width: 61.8%"><br>
+            <article>
+                <section>
+                    <div style="text-align: justify">
+                        Idempotent Schema (IS) wants to work with existing conceptualizations that are simple, well-accepted as being authority-worthy, and available to access and utility.
+                        This is much like a speaker of the English language who might like to be conversant with the colloquial utility of the language, both in its universal aspect, and locally amongst those with whom he or she would willingly associate.
+                        Initally, the development of IS has favored the style and practicality of the International Federation of Library Associations and Institutions (IFLA).
+                    </div>
+                    <br>
+                    <div style="text-align: justify">
+                        Both IFLA’s Library Reference Model (LRM) and its slightly earlier publication of object-oriented Functional Requirements for Bibliographic Records (FRBRoo) are making sense to me.
+                        The closely associated Resource Description and Access (RDA) is a bit more extensive than I like to give as much attention to carefully referencing, but they do offer a good representation of LRM vocabulary, so I will make some use of theirs.
+                        ICOM’s International Committee for Documentation (CIDOC) has a Conceptual Reference Model (CRM) that adds a great deal to knowledge organization, as IFLA’s developmental work with them has brought to my attention:
+                    </div>
+                    <blockquote>
+                        <div style="text-align: justify">
+                            Now that IFLA LRM is approved, the harmonisation process with the CIDOC CRM model has begun anew.
+                            Work has already begun to review FRBRoo version 2.4 to bring it into conformance with IFLA LRM, thus maintaining this important aspect of cross-community compatibility.
+                            The first steps towards bringing the object-oriented model into conformity with IFLA LRM took place in April 2017, at the Joint Meeting of the CIDOC CRM Special Interest Group and FRBR/CRM Harmonisation Working Group, and has continued at meetings in October 2017, January 2018 and May 2018.
+                            Since the entity-relationship model was given a new name, the decision was taken at the October 2017 meeting of the CIDOC CRM Special Interest Group to also rename the object-oriented model, which will be known as LRMoo.[<a href="#2">2</a>]
+                        </div>
+                    </blockquote>
+                    <br>
+                    <div style="text-align: justify">
+                        As eager as I am to see how this will look (my interest is very much like the anticipation of an upcoming release of a new <i>Dungeons &amp; Dragons</i> manual, or maybe a music CD), I'll continue building with what blocks we've already been given.
+                        My learning and creation has two essential ingredients: the qualitative factor, which I'm going to tabulate below, and the orthodoxy, such as IFLA and its progressive standards.
+                        As Vaiṣṇavism was for a couple decades the “new toy,” in that I had broken free from the insecurity of being the audience rather than the practitioner, now bibliographic knowledge organization and representation are getting to me.
+                    </div>
+                    <br><br>
+                    <div style="font-size: small; text-align: center">
+                        <table style="width: 100%">
+                            <caption>
+                                milder / stronger, earlier / later, intra- / trans-, but all equatable and any qualifiable as better or worse
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th style="width: 15%">
+                                        <u>identity</u>
+                                    </th>
+                                    <th style="width: 14%">
+                                        &nbsp;
+                                    </th>
+                                    <th style="width: 14%">
+                                        <u>bio-society</u>
+                                    </th>
+                                    <th style="width: 14%">
+                                        &nbsp;
+                                    </th>
+                                    <th style="width: 14%">
+                                        <u>spacio-temporality</u>
+                                    </th>
+                                    <th style="width: 14%">
+                                        &nbsp;
+                                    </th>
+                                    <th style="width: 15%">
+                                        <u>agency</u>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <b>gratia</b>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <b>ius</b>, &amp;
+                                        <br>
+                                        [<i>E2 work</i>] ethic
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        [<i>E3 expression</i>]
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        [<i>F6 concept</i>]-ualization
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <i>E10 place</i>-ment →
+                                    </td>
+                                    <td>
+                                        [<i>E4 manifestation</i>]
+                                    </td>
+                                    <td>
+                                        [<i>E10 place</i>]
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        [<i>E5 item</i>]
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        [<i>E1 res</i>]
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <b>sanctum</b>, &amp;
+                                        <br>
+                                        [<i>E7 person</i>]-ality
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        [<i>E8 collective agent</i>]
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        [<i>E6 agent</i>]
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        [<i>F7 object</i>]-ivity
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <i>F8 event</i>-uality →
+                                    </td>
+                                    <td>
+                                        [<i>E11 time-span</i>]
+                                    </td>
+                                    <td>
+                                        [<i>F8 event</i>]
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        [<b><i>E9 nomen</i></b>]
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        [<i>F13 identifier</i>]
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        [<i>F50 contr. access pt.</i>]
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <b>factum</b>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="text-align: center">
+                            note: prefix <q>E#</q> in the table above means LRM ID [<a href="#3">3</a>], <q>F#</q> means FRBRoo ID [<a href="#4">4</a>]
+                        </div>
+                        <br>
+                        <table style="width: 100%">
+                            <caption>
+                                ways of comparing better or worse, therefore stricter association with intra-Solar authority
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th style="width: 25%">
+                                        Earth
+                                    </th>
+                                    <th style="width: 25%">
+                                        Venus
+                                    </th>
+                                    <th style="width: 25%">
+                                        Mercury
+                                    </th>
+                                    <th style="width: 25%">
+                                        Sun
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <u>emotion</u>
+                                    </td>
+                                    <td>
+                                        <u>guṇa</u>
+                                    </td>
+                                    <td>
+                                        <u>ethic</u>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <u>aesthetic</u>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        like
+                                    </td>
+                                    <td>
+                                        śuddha
+                                    </td>
+                                    <td>
+                                        law
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        the heroic
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        love
+                                    </td>
+                                    <td>
+                                        sattva
+                                    </td>
+                                    <td>
+                                        goodness
+                                    </td>
+                                    <td>
+                                        the picturesque
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        the sublime
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        fear
+                                    </td>
+                                    <td>
+                                        rajas
+                                    </td>
+                                    <td>
+                                        chaos
+                                    </td>
+                                    <td>
+                                        (the tragic, here or ↓)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        the comic
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hate
+                                    </td>
+                                    <td>
+                                        tamas
+                                    </td>
+                                    <td>
+                                        evil
+                                    </td>
+                                    <td>
+                                        (the tragic, here or ↑)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <br>
+                <footer>
+                    <h4>
+                        References
+                    </h4>
+                    <ol start="2">
+                        <li>
+                            <a name="2">
+                                Riva, P., M. Žumer. 2018.
+                            </a>
+                            <i>FRBRoo, the IFLA Library Reference Model, and Now LRMoo: A Circle of Development</i>.
+                            International Federation of Library Associations and Institutions (IFLA).
+                            <a href="http://library.ifla.org/2130/1/074-riva-en.pdf">http://library.ifla.org/2130/1/074-riva-en.pdf</a>.
+                        </li>
+                        <li>
+                            <a name="3">
+                                Riva, P., P. Le Boeuf, and M. Žumer. 2017.
+                            </a>
+                            <i>IFLA Library Reference Model: A Conceptual Model for Bibliographic Information</i>.
+                            Consolidation Editorial Group of the IFLA FRBR Review Group.
+                            <a href="https://www.ifla.org/files/assets/cataloguing/frbr-lrm/ifla-lrm-august-2017_rev201712.pdf">https://www.ifla.org/files/assets/cataloguing/frbr-lrm/ifla-lrm-august-2017_rev201712.pdf</a>.
+                        </li>
+                        <li>
+                            <a name="4">
+                                Bekiari, C., M. Doerr, P. Le Boeuf, and P. Riva. 2016.
+                            </a>
+                            <i>Definition of FRBRoo: A Conceptual Model for Bibliographic Information in Object-Oriented Formalism</i>. Working Group on FRBR/CRM Dialogue. <a href="http://www.ifla.org/files/assets/cataloguing/FRBRoo/frbroo_v_2.4.pdf">http://www.ifla.org/files/assets/cataloguing/FRBRoo/frbroo_v_2.4.pdf</a>.
+                        </li>
+                    </ol>
+                </footer>
+            </article>
+        </main>
+    </body>
 </html>
